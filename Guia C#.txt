@@ -1,0 +1,19 @@
+Criar o projeto Windows Forms Application
+	Nome Projeto: View
+	Nome Solução: NossaPlanta
+
+
+
+Criar o projeto Class Library
+	Nome Projeto: Model
+
+Criar o projeto Class Library
+	Nome Projeto: Repository
+Adicionar a referencia do projeto Model
+Como? (Solution Explorer
+	-Projeto Repository
+	-Botão Direito Referencias
+	-Adicionar Referencia
+	-Projeto 
+	- Selecionar o projeto Model
+	-Botão Ok)
