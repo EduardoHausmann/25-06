@@ -30,6 +30,20 @@ namespace Repository
             conexao.Close();
         }
 
+        public void Apagar(int id)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"DELETE FROM plantas WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+            comando.ExecuteNonQuery();
+            conexao.Close();
+        }
+
         public List<Planta> ObterTodos(string busca)
         {
             SqlConnection conexao = new SqlConnection();
@@ -59,6 +73,53 @@ namespace Repository
                 plantas.Add(planta);
             }
             return plantas;
+        }
+
+        public Planta ObterPeloId(int id)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "SELECT * FROM plantas WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+
+            DataTable tabela = new DataTable();
+            tabela.Load(comando.ExecuteReader());
+
+            if (tabela.Rows.Count ==0)
+            {
+                return null;
+            }
+
+            DataRow linha = tabela.Rows[0];
+            Planta planta = new Planta();
+            planta.Id = id;
+            planta.Nome = linha["nome"].ToString();
+            planta.Peso = Convert.ToDecimal(linha["peso"]);
+            planta.Altura = Convert.ToDecimal(linha["altura"]);
+            planta.Carnivora = Convert.ToBoolean(linha["carnivora"]);
+            return planta;
+        }
+
+        public void Alterar(Planta planta)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"UPDATE plantas SET nome = @NOME, altura = @ALTURA, peso = @PESO, carnivora = @CARNIVORA WHERE id = @ID";
+            comando.Parameters.AddWithValue("NOME", planta.Nome);
+            comando.Parameters.AddWithValue("ALTURA", planta.Altura);
+            comando.Parameters.AddWithValue("PESO", planta.Peso);
+            comando.Parameters.AddWithValue("CARNIVORA", planta.Carnivora);
+            comando.Parameters.AddWithValue("ID", planta.Id);
+            comando.ExecuteNonQuery();
+            conexao.Close();
         }
     }
 }

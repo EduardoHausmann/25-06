@@ -7,3 +7,12 @@ C:\Users\Alunos\source\repos\NossaPlanta\Repository\obj\Debug\Repository.csprojA
 C:\Users\Alunos\source\repos\NossaPlanta\Repository\obj\Debug\Repository.csproj.CopyComplete
 C:\Users\Alunos\source\repos\NossaPlanta\Repository\obj\Debug\Repository.dll
 C:\Users\Alunos\source\repos\NossaPlanta\Repository\obj\Debug\Repository.pdb
+T:\Documentos\GitHub\25-06\NossaPlanta\Repository\bin\Debug\Repository.dll
+T:\Documentos\GitHub\25-06\NossaPlanta\Repository\bin\Debug\Repository.pdb
+T:\Documentos\GitHub\25-06\NossaPlanta\Repository\bin\Debug\Model.dll
+T:\Documentos\GitHub\25-06\NossaPlanta\Repository\bin\Debug\Model.pdb
+T:\Documentos\GitHub\25-06\NossaPlanta\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+T:\Documentos\GitHub\25-06\NossaPlanta\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+T:\Documentos\GitHub\25-06\NossaPlanta\Repository\obj\Debug\Repository.csproj.CopyComplete
+T:\Documentos\GitHub\25-06\NossaPlanta\Repository\obj\Debug\Repository.dll
+T:\Documentos\GitHub\25-06\NossaPlanta\Repository\obj\Debug\Repository.pdb

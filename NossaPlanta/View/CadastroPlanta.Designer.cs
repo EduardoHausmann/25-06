@@ -46,8 +46,9 @@
             this.ColumnCarnivora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBusca = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnApagar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlantas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,6 +167,7 @@
             this.dgvPlantas.Location = new System.Drawing.Point(202, 69);
             this.dgvPlantas.Name = "dgvPlantas";
             this.dgvPlantas.ReadOnly = true;
+            this.dgvPlantas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPlantas.Size = new System.Drawing.Size(455, 261);
             this.dgvPlantas.TabIndex = 7;
             // 
@@ -220,35 +222,46 @@
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(480, 14);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(82, 51);
-            this.btnEditar.TabIndex = 6;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
             // btnApagar
             // 
             this.btnApagar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApagar.Location = new System.Drawing.Point(571, 12);
+            this.btnApagar.Location = new System.Drawing.Point(480, 12);
             this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(82, 51);
-            this.btnApagar.TabIndex = 6;
+            this.btnApagar.Size = new System.Drawing.Size(88, 51);
+            this.btnApagar.TabIndex = 8;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
-            this.btnApagar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(569, 12);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(88, 51);
+            this.btnEditar.TabIndex = 9;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(97, 9);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 19);
+            this.lblId.TabIndex = 10;
+            this.lblId.Visible = false;
             // 
             // CadastroPlanta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 342);
-            this.Controls.Add(this.btnApagar);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.rbNao);
             this.Controls.Add(this.rbSim);
@@ -291,8 +304,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCarnivora;
         private System.Windows.Forms.Label lblBusca;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Label lblId;
     }
 }
 
