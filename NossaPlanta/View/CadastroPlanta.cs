@@ -61,7 +61,7 @@ namespace View
 
         private void LimparCampos()
         {
-            lblId.Text = 0;
+            lblId.Text = "";
             txtNome.Clear();
             mtbAltura.Clear();
             mtbPeso.Clear();

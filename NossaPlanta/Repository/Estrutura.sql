@@ -1,4 +1,4 @@
-﻿DROP TABLE plantas;
+﻿DROP TABLE IF EXISTS plantas;
 CREATE TABLE plantas(
 	id INT PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(100),

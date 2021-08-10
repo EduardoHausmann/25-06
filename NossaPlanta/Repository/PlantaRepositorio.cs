@@ -11,7 +11,7 @@ namespace Repository
 {
     public class PlantaRepositorio
     {
-        public string CadeiaConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\NossaPlanta.mdf;Integrated Security=True;Connect Timeout=30";
+        public string CadeiaConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\Database.mdf;Integrated Security=True";
 
         public void Inserir(Planta planta)
         {
