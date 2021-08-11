@@ -7,14 +7,16 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Lista de Plantas</title>
-    <script src="~/Scripts/bootstrap.js"></script>
-    <link rel="stylesheet" href="~/Content/Bootstrap/bootstrap.css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
 </head>
 <body>
     <h3 class="text-center text-black fw-bolder mb-3 mt-3">Lista de Plantas</h3>
 
-    <div>
-        <a class="btn btn-outline-primary mt-3 mb-3" href="/planta/cadastro" id="botao-cadastro">Cadastrar Planta</a>
+    <div class="row mb-3">
+        <div class="col-12">
+            <a class="btn btn-outline-primary mt-3 mb-3" href="/planta/Cadastro" id="botao-cadastro"><i class="fa-plus"></i>Cadastrar Planta</a>
+        </div>
     </div>
 
     <table class="table table-bordered table-hover table-striped">
@@ -39,7 +41,7 @@
                     <td>@planta.Carnivora</td>
                     <td>
                         <a href="/planta/edita?id=@planta.Id" class="btn btn-outline-primary">Editar</a>
-                        <a href="/planta/apaga?id=@planta.Id" class="btn btn-outline-danger">Apagar</a>
+                        <a href="/planta/Apagar?id=@planta.Id" class="btn btn-outline-danger">Apagar</a>
                     </td>
                 </tr>
             }
