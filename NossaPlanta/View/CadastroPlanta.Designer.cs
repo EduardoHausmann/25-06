@@ -39,16 +39,16 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.mtbPeso = new System.Windows.Forms.MaskedTextBox();
             this.dgvPlantas = new System.Windows.Forms.DataGridView();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAltura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCarnivora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBusca = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnApagar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAltura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCarnivora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlantas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,6 +157,7 @@
             // 
             this.dgvPlantas.AllowUserToAddRows = false;
             this.dgvPlantas.AllowUserToDeleteRows = false;
+            this.dgvPlantas.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvPlantas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlantas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
@@ -164,44 +165,13 @@
             this.ColumnAltura,
             this.ColumnPeso,
             this.ColumnCarnivora});
-            this.dgvPlantas.Location = new System.Drawing.Point(202, 69);
+            this.dgvPlantas.Location = new System.Drawing.Point(215, 70);
             this.dgvPlantas.Name = "dgvPlantas";
             this.dgvPlantas.ReadOnly = true;
+            this.dgvPlantas.RowHeadersVisible = false;
             this.dgvPlantas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlantas.Size = new System.Drawing.Size(455, 261);
+            this.dgvPlantas.Size = new System.Drawing.Size(438, 261);
             this.dgvPlantas.TabIndex = 7;
-            // 
-            // ColumnId
-            // 
-            this.ColumnId.HeaderText = "Código";
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
-            this.ColumnId.Width = 50;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnAltura
-            // 
-            this.ColumnAltura.HeaderText = "Altura";
-            this.ColumnAltura.Name = "ColumnAltura";
-            this.ColumnAltura.ReadOnly = true;
-            // 
-            // ColumnPeso
-            // 
-            this.ColumnPeso.HeaderText = "Peso";
-            this.ColumnPeso.Name = "ColumnPeso";
-            this.ColumnPeso.ReadOnly = true;
-            // 
-            // ColumnCarnivora
-            // 
-            this.ColumnCarnivora.HeaderText = "Carnivora";
-            this.ColumnCarnivora.Name = "ColumnCarnivora";
-            this.ColumnCarnivora.ReadOnly = true;
-            this.ColumnCarnivora.Width = 60;
             // 
             // lblBusca
             // 
@@ -254,10 +224,44 @@
             this.lblId.TabIndex = 10;
             this.lblId.Visible = false;
             // 
+            // ColumnId
+            // 
+            this.ColumnId.HeaderText = "Código";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Width = 50;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            this.ColumnNome.Width = 125;
+            // 
+            // ColumnAltura
+            // 
+            this.ColumnAltura.HeaderText = "Altura";
+            this.ColumnAltura.Name = "ColumnAltura";
+            this.ColumnAltura.ReadOnly = true;
+            // 
+            // ColumnPeso
+            // 
+            this.ColumnPeso.HeaderText = "Peso";
+            this.ColumnPeso.Name = "ColumnPeso";
+            this.ColumnPeso.ReadOnly = true;
+            // 
+            // ColumnCarnivora
+            // 
+            this.ColumnCarnivora.HeaderText = "Carnivora";
+            this.ColumnCarnivora.Name = "ColumnCarnivora";
+            this.ColumnCarnivora.ReadOnly = true;
+            this.ColumnCarnivora.Width = 60;
+            // 
             // CadastroPlanta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(665, 342);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnEditar);
@@ -297,16 +301,16 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.MaskedTextBox mtbPeso;
         private System.Windows.Forms.DataGridView dgvPlantas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAltura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPeso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCarnivora;
         private System.Windows.Forms.Label lblBusca;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAltura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPeso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCarnivora;
     }
 }
 

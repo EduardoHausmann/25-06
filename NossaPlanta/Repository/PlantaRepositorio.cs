@@ -13,7 +13,7 @@ namespace Repository
     {
         public string CadeiaConexao = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\Database.mdf;Integrated Security=True";
 
-        public void Inserir(Planta planta)
+        public int Inserir(Planta planta)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaConexao;
@@ -26,11 +26,13 @@ namespace Repository
             comando.Parameters.AddWithValue("@PESO", planta.Peso);
             comando.Parameters.AddWithValue("@ALTURA", planta.Altura);
             comando.Parameters.AddWithValue("@CARNIVORA", planta.Carnivora);
-            comando.ExecuteNonQuery();
+            int id = Convert.ToInt32(comando.ExecuteScalar());
             conexao.Close();
+            return id;
+
         }
 
-        public void Apagar(int id)
+        public bool Apagar(int id)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaConexao;
@@ -40,8 +42,9 @@ namespace Repository
             comando.Connection = conexao;
             comando.CommandText = @"DELETE FROM plantas WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
-            comando.ExecuteNonQuery();
+            int qtdAfetada = Convert.ToInt32(comando.ExecuteNonQuery());
             conexao.Close();
+            return qtdAfetada == 1;
         }
 
         public List<Planta> ObterTodos(string busca)
@@ -104,7 +107,7 @@ namespace Repository
             return planta;
         }
 
-        public void Alterar(Planta planta)
+        public bool Alterar(Planta planta)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaConexao;
@@ -118,8 +121,9 @@ namespace Repository
             comando.Parameters.AddWithValue("PESO", planta.Peso);
             comando.Parameters.AddWithValue("CARNIVORA", planta.Carnivora);
             comando.Parameters.AddWithValue("ID", planta.Id);
-            comando.ExecuteNonQuery();
+            int qtdAfetada = Convert.ToInt32(comando.ExecuteNonQuery());
             conexao.Close();
+            return qtdAfetada == 1;
         }
     }
 }

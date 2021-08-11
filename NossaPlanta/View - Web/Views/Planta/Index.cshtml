@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lista de Plantas</title>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link rel="stylesheet" href="~/Content/Bootstrap/bootstrap.css" />
+</head>
+<body>
+    <h3 class="text-center text-black fw-bolder mb-3 mt-3">Lista de Plantas</h3>
+
+    <div>
+        <a class="btn btn-outline-primary mt-3 mb-3" href="/planta/cadastro" id="botao-cadastro">Cadastrar Planta</a>
+    </div>
+
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>Carnívora</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Model.Planta planta in ViewBag.Plantas)
+            {
+                <tr>
+                    <td>@planta.Id</td>
+                    <td>@planta.Nome</td>
+                    <td>@planta.Altura</td>
+                    <td>@planta.Peso</td>
+                    <td>@planta.Carnivora</td>
+                    <td>
+                        <a href="/planta/edita?id=@planta.Id" class="btn btn-outline-primary">Editar</a>
+                        <a href="/planta/apaga?id=@planta.Id" class="btn btn-outline-danger">Apagar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
