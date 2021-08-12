@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -86,14 +87,6 @@ namespace View
             }
         }
 
-        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                AtualizarTabela();
-            }
-        }
-
         private void btnApagar_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(dgvPlantas.CurrentRow.Cells[0].Value);
@@ -102,7 +95,12 @@ namespace View
             AtualizarTabela();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnAtualiza_Click(object sender, EventArgs e)
+        {
+            AtualizarTabela();
+        }
+
+        private void dgvPlantas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             PlantaRepositorio repositorio = new PlantaRepositorio();
 
@@ -112,12 +110,12 @@ namespace View
             {
                 txtNome.Text = planta.Nome;
                 mtbAltura.Text = planta.Altura.ToString("0.00");
-                mtbPeso.Text = planta.Peso.ToString("000.00");               
+                mtbPeso.Text = planta.Peso.ToString("000.00");
                 lblId.Text = planta.Id.ToString();
             }
         }
 
-        private void CadastroPlanta_Click(object sender, EventArgs e)
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             AtualizarTabela();
         }

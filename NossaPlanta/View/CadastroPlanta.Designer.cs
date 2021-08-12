@@ -36,15 +36,15 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.mtbPeso = new System.Windows.Forms.MaskedTextBox();
             this.dgvPlantas = new System.Windows.Forms.DataGridView();
-            this.lblBusca = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnApagar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.lblId = new System.Windows.Forms.Label();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAltura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblBusca = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnApagar = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
+            this.btnAtualiza = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlantas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +100,7 @@
             this.btnSalvar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Location = new System.Drawing.Point(9, 214);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(101, 51);
+            this.btnSalvar.Size = new System.Drawing.Size(88, 51);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -126,64 +126,14 @@
             this.ColumnNome,
             this.ColumnAltura,
             this.ColumnPeso});
-            this.dgvPlantas.Location = new System.Drawing.Point(220, 70);
+            this.dgvPlantas.Location = new System.Drawing.Point(202, 70);
             this.dgvPlantas.Name = "dgvPlantas";
             this.dgvPlantas.ReadOnly = true;
             this.dgvPlantas.RowHeadersVisible = false;
             this.dgvPlantas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPlantas.Size = new System.Drawing.Size(424, 195);
             this.dgvPlantas.TabIndex = 7;
-            // 
-            // lblBusca
-            // 
-            this.lblBusca.AutoSize = true;
-            this.lblBusca.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusca.Location = new System.Drawing.Point(198, 30);
-            this.lblBusca.Name = "lblBusca";
-            this.lblBusca.Size = new System.Drawing.Size(46, 19);
-            this.lblBusca.TabIndex = 0;
-            this.lblBusca.Text = "Busca";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(250, 27);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(224, 26);
-            this.txtBuscar.TabIndex = 1;
-            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
-            // 
-            // btnApagar
-            // 
-            this.btnApagar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApagar.Location = new System.Drawing.Point(480, 12);
-            this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(88, 51);
-            this.btnApagar.TabIndex = 8;
-            this.btnApagar.Text = "Apagar";
-            this.btnApagar.UseVisualStyleBackColor = true;
-            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(569, 12);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(88, 51);
-            this.btnEditar.TabIndex = 9;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(97, 9);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(0, 19);
-            this.lblId.TabIndex = 10;
-            this.lblId.Visible = false;
+            this.dgvPlantas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlantas_CellDoubleClick);
             // 
             // ColumnId
             // 
@@ -211,14 +161,65 @@
             this.ColumnPeso.Name = "ColumnPeso";
             this.ColumnPeso.ReadOnly = true;
             // 
+            // lblBusca
+            // 
+            this.lblBusca.AutoSize = true;
+            this.lblBusca.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusca.Location = new System.Drawing.Point(198, 33);
+            this.lblBusca.Name = "lblBusca";
+            this.lblBusca.Size = new System.Drawing.Size(46, 19);
+            this.lblBusca.TabIndex = 0;
+            this.lblBusca.Text = "Busca";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(250, 27);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(270, 26);
+            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // btnApagar
+            // 
+            this.btnApagar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApagar.Location = new System.Drawing.Point(103, 214);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(88, 51);
+            this.btnApagar.TabIndex = 8;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(97, 9);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 19);
+            this.lblId.TabIndex = 10;
+            this.lblId.Visible = false;
+            // 
+            // btnAtualiza
+            // 
+            this.btnAtualiza.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualiza.Location = new System.Drawing.Point(538, 15);
+            this.btnAtualiza.Name = "btnAtualiza";
+            this.btnAtualiza.Size = new System.Drawing.Size(88, 51);
+            this.btnAtualiza.TabIndex = 11;
+            this.btnAtualiza.Text = "Refresh";
+            this.btnAtualiza.UseVisualStyleBackColor = true;
+            this.btnAtualiza.Click += new System.EventHandler(this.btnAtualiza_Click);
+            // 
             // CadastroPlanta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(665, 275);
+            this.ClientSize = new System.Drawing.Size(637, 275);
+            this.Controls.Add(this.btnAtualiza);
             this.Controls.Add(this.lblId);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.lblPeso);
@@ -233,7 +234,6 @@
             this.Name = "CadastroPlanta";
             this.Text = "Cadstro Plantas";
             this.Load += new System.EventHandler(this.CadastroPlanta_Load);
-            this.Click += new System.EventHandler(this.CadastroPlanta_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlantas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -253,12 +253,12 @@
         private System.Windows.Forms.Label lblBusca;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnApagar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAltura;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPeso;
+        private System.Windows.Forms.Button btnAtualiza;
     }
 }
 
