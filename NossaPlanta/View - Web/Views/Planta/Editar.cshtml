@@ -3,5 +3,41 @@
     ViewBag.Title = "Editar";
 }
 
-<h2>Editar</h2>
+<title>Editar Planta</title>
 
+<h3 class="text-center fw-bolder mt-3 mb-3 ">Edição de Planta</h3>
+
+<form action="/planta/update" method="post">
+    <input type="hidden" name="id" value="@ViewBag.Planta.Id" />
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-nome">Planta</label>
+                <input type="text" name="nome" class="form-control" id="campo-nome" value="@ViewBag.Planta.Nome" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="campo-altura">Altura</label>
+                <input type="text" name="altura" class="form-control" id="campo-altura" value="@ViewBag.Planta.Altura" />
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-group">
+                <label for="campo-peso">Peso</label>
+                <input type="text" name="peso" class="form-control" id="campo-peso" value="@ViewBag.Planta.Peso" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <button type="submit" class="btn btn-outline-success float-right mt-3 mb-3"> <i class="fas fa-save"></i> Salvar</button>
+        </div>
+    </div>
+</form>
