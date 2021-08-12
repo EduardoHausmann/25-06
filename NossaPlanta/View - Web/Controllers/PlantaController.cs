@@ -26,13 +26,12 @@ namespace View___Web.Controllers
             return View();
         }
 
-        public ActionResult Store(string nome, bool carnivora, decimal altura, decimal peso)
+        public ActionResult Store(string nome, decimal altura, decimal peso)
         {
             Planta planta = new Planta();
             planta.Nome = nome;
             planta.Altura = altura;
             planta.Peso = peso;
-            planta.Carnivora = carnivora;
             int id = repository.Inserir(planta);
 
             return RedirectToAction("Index");
@@ -53,14 +52,13 @@ namespace View___Web.Controllers
             return View();
         }
 
-        public ActionResult Update(int id, string nome, bool carnivora, decimal altura, decimal peso)
+        public ActionResult Update(int id, string nome, decimal altura, decimal peso)
         {
             Planta planta = new Planta();
             planta.Id = id;
             planta.Nome = nome;
             planta.Altura = altura;
             planta.Peso = peso;
-            planta.Carnivora = carnivora;
             
             bool alterou = repository.Alterar(planta);
             return RedirectToAction("Index");

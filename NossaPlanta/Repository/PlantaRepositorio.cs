@@ -21,11 +21,10 @@ namespace Repository
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = @"INSERT INTO plantas (nome, peso, altura, carnivora) VALUES (@NOME, @PESO, @ALTURA, @CARNIVORA)";
+            comando.CommandText = @"INSERT INTO plantas (nome, peso, altura) VALUES (@NOME, @PESO, @ALTURA)";
             comando.Parameters.AddWithValue("@NOME", planta.Nome);
             comando.Parameters.AddWithValue("@PESO", planta.Peso);
             comando.Parameters.AddWithValue("@ALTURA", planta.Altura);
-            comando.Parameters.AddWithValue("@CARNIVORA", planta.Carnivora);
             int id = Convert.ToInt32(comando.ExecuteScalar());
             conexao.Close();
             return id;
@@ -72,7 +71,6 @@ namespace Repository
                 planta.Nome = linha["nome"].ToString();
                 planta.Altura = Convert.ToDecimal(linha["altura"]);
                 planta.Peso = Convert.ToDecimal(linha["peso"]);
-                planta.Carnivora = Convert.ToBoolean(linha["carnivora"]);
                 plantas.Add(planta);
             }
             return plantas;
@@ -103,7 +101,6 @@ namespace Repository
             planta.Nome = linha["nome"].ToString();
             planta.Peso = Convert.ToDecimal(linha["peso"]);
             planta.Altura = Convert.ToDecimal(linha["altura"]);
-            planta.Carnivora = Convert.ToBoolean(linha["carnivora"]);
             return planta;
         }
 
@@ -115,11 +112,10 @@ namespace Repository
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = @"UPDATE plantas SET nome = @NOME, altura = @ALTURA, peso = @PESO, carnivora = @CARNIVORA WHERE id = @ID";
+            comando.CommandText = @"UPDATE plantas SET nome = @NOME, altura = @ALTURA, peso = @PESO WHERE id = @ID";
             comando.Parameters.AddWithValue("NOME", planta.Nome);
             comando.Parameters.AddWithValue("ALTURA", planta.Altura);
             comando.Parameters.AddWithValue("PESO", planta.Peso);
-            comando.Parameters.AddWithValue("CARNIVORA", planta.Carnivora);
             comando.Parameters.AddWithValue("ID", planta.Id);
             int qtdAfetada = Convert.ToInt32(comando.ExecuteNonQuery());
             conexao.Close();

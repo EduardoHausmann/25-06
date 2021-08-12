@@ -3,15 +3,39 @@
     ViewBag.Title = "Cadastro";
 }
 
-<html>
-<head>
+<title>Cadastrar Planta</title>
 
-</head>
-<body>
-    <h3>Cadastro de Planta</h3>
+<h3 class="text-center fw-bolder mt-3 mb-3 ">Cadastro de Planta</h3>
 
-    <form action="/planta/store" method="post">
+<form action="/planta/store" method="post">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-nome">Planta</label>
+                <input type="text" name="nome" class="form-control" id="campo-nome" />
+            </div>
+        </div>
+    </div>
 
-    </form>
-</body>
-</html>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="campo-altura">Altura</label>
+                <input type="text" name="altura" class="form-control" id="campo-altura" />
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-group">
+                <label for="campo-peso">Peso</label>
+                <input type="text" name="peso" class="form-control" id="campo-peso" />
+            </div>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-success float-right mt-3 mb-3"> <i class="fas fa-save"></i> Salvar</button>
+            </div>
+        </div>
+</form>

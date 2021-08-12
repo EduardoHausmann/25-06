@@ -10,7 +10,6 @@ namespace Model
     {
         public int Id;
         public string Nome;
-        public bool Carnivora;
         public decimal Altura;
         public decimal Peso;        
     }

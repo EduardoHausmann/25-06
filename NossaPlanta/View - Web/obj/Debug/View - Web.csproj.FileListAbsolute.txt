@@ -63,3 +63,6 @@ C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\View - Web
 C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\View - Web\bin\roslyn\System.Memory.dll
 C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\View - Web\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\View - Web\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\View - Web\bin\View.exe
+C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\View - Web\bin\View.pdb
+C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\View - Web\bin\View.exe.config

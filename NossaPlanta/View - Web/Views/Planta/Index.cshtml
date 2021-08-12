@@ -3,49 +3,38 @@
     ViewBag.Title = "Index";
 }
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Lista de Plantas</title>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
-</head>
-<body>
-    <h3 class="text-center text-black fw-bolder mb-3 mt-3">Lista de Plantas</h3>
+<title>Lista Plantas</title>
+<h3 class="text-center fw-bolder mb-3 mt-3">Lista de Plantas</h3>
 
-    <div class="row mb-3">
-        <div class="col-12">
-            <a class="btn btn-outline-primary mt-3 mb-3" href="/planta/Cadastro" id="botao-cadastro"><i class="fa-plus"></i>Cadastrar Planta</a>
-        </div>
+<div class="row mb-3">
+    <div class="col-12">
+        <a class="btn btn-outline-primary mt-3 mb-3" href="/planta/Cadastro" id="botao-cadastro">@*<i class="fa-plus"></i>*@Cadastrar Planta</a>
     </div>
+</div>
 
-    <table class="table table-bordered table-hover table-striped">
-        <thead>
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Altura</th>
+            <th>Peso</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Model.Planta planta in ViewBag.Plantas)
+        {
             <tr>
-                <th>Código</th>
-                <th>Nome</th>
-                <th>Altura</th>
-                <th>Peso</th>
-                <th>Carnívora</th>
-                <th>Ação</th>
+                <td>@planta.Id</td>
+                <td>@planta.Nome</td>
+                <td>@planta.Altura</td>
+                <td>@planta.Peso</td>
+                <td>
+                    <a href="/planta/edita?id=@planta.Id" class="btn btn-outline-primary">Editar</a>
+                    <a href="/planta/Apagar?id=@planta.Id" class="btn btn-outline-danger">Apagar</a>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (Model.Planta planta in ViewBag.Plantas)
-            {
-                <tr>
-                    <td>@planta.Id</td>
-                    <td>@planta.Nome</td>
-                    <td>@planta.Altura</td>
-                    <td>@planta.Peso</td>
-                    <td>@planta.Carnivora</td>
-                    <td>
-                        <a href="/planta/edita?id=@planta.Id" class="btn btn-outline-primary">Editar</a>
-                        <a href="/planta/Apagar?id=@planta.Id" class="btn btn-outline-danger">Apagar</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</body>
-</html>
+        }
+    </tbody>
+</table>

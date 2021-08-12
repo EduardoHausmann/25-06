@@ -33,9 +33,6 @@
             this.lblAltura = new System.Windows.Forms.Label();
             this.mtbAltura = new System.Windows.Forms.MaskedTextBox();
             this.lblPeso = new System.Windows.Forms.Label();
-            this.lblCarnivora = new System.Windows.Forms.Label();
-            this.rbSim = new System.Windows.Forms.RadioButton();
-            this.rbNao = new System.Windows.Forms.RadioButton();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.mtbPeso = new System.Windows.Forms.MaskedTextBox();
             this.dgvPlantas = new System.Windows.Forms.DataGridView();
@@ -48,7 +45,6 @@
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAltura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCarnivora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlantas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,44 +95,10 @@
             this.lblPeso.TabIndex = 4;
             this.lblPeso.Text = "Peso";
             // 
-            // lblCarnivora
-            // 
-            this.lblCarnivora.AutoSize = true;
-            this.lblCarnivora.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarnivora.Location = new System.Drawing.Point(9, 203);
-            this.lblCarnivora.Name = "lblCarnivora";
-            this.lblCarnivora.Size = new System.Drawing.Size(69, 19);
-            this.lblCarnivora.TabIndex = 6;
-            this.lblCarnivora.Text = "Carnivora";
-            // 
-            // rbSim
-            // 
-            this.rbSim.AutoSize = true;
-            this.rbSim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSim.Location = new System.Drawing.Point(9, 241);
-            this.rbSim.Name = "rbSim";
-            this.rbSim.Size = new System.Drawing.Size(50, 23);
-            this.rbSim.TabIndex = 4;
-            this.rbSim.TabStop = true;
-            this.rbSim.Text = "Sim";
-            this.rbSim.UseVisualStyleBackColor = true;
-            // 
-            // rbNao
-            // 
-            this.rbNao.AutoSize = true;
-            this.rbNao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNao.Location = new System.Drawing.Point(78, 241);
-            this.rbNao.Name = "rbNao";
-            this.rbNao.Size = new System.Drawing.Size(54, 23);
-            this.rbNao.TabIndex = 5;
-            this.rbNao.TabStop = true;
-            this.rbNao.Text = "Não";
-            this.rbNao.UseVisualStyleBackColor = true;
-            // 
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(9, 280);
+            this.btnSalvar.Location = new System.Drawing.Point(9, 214);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(101, 51);
             this.btnSalvar.TabIndex = 6;
@@ -163,14 +125,13 @@
             this.ColumnId,
             this.ColumnNome,
             this.ColumnAltura,
-            this.ColumnPeso,
-            this.ColumnCarnivora});
-            this.dgvPlantas.Location = new System.Drawing.Point(215, 70);
+            this.ColumnPeso});
+            this.dgvPlantas.Location = new System.Drawing.Point(220, 70);
             this.dgvPlantas.Name = "dgvPlantas";
             this.dgvPlantas.ReadOnly = true;
             this.dgvPlantas.RowHeadersVisible = false;
             this.dgvPlantas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlantas.Size = new System.Drawing.Size(438, 261);
+            this.dgvPlantas.Size = new System.Drawing.Size(424, 195);
             this.dgvPlantas.TabIndex = 7;
             // 
             // lblBusca
@@ -236,7 +197,7 @@
             this.ColumnNome.HeaderText = "Nome";
             this.ColumnNome.Name = "ColumnNome";
             this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 125;
+            this.ColumnNome.Width = 170;
             // 
             // ColumnAltura
             // 
@@ -250,26 +211,16 @@
             this.ColumnPeso.Name = "ColumnPeso";
             this.ColumnPeso.ReadOnly = true;
             // 
-            // ColumnCarnivora
-            // 
-            this.ColumnCarnivora.HeaderText = "Carnivora";
-            this.ColumnCarnivora.Name = "ColumnCarnivora";
-            this.ColumnCarnivora.ReadOnly = true;
-            this.ColumnCarnivora.Width = 60;
-            // 
             // CadastroPlanta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(665, 342);
+            this.ClientSize = new System.Drawing.Size(665, 275);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.rbNao);
-            this.Controls.Add(this.rbSim);
-            this.Controls.Add(this.lblCarnivora);
             this.Controls.Add(this.lblPeso);
             this.Controls.Add(this.mtbPeso);
             this.Controls.Add(this.mtbAltura);
@@ -282,6 +233,7 @@
             this.Name = "CadastroPlanta";
             this.Text = "Cadstro Plantas";
             this.Load += new System.EventHandler(this.CadastroPlanta_Load);
+            this.Click += new System.EventHandler(this.CadastroPlanta_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlantas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -295,9 +247,6 @@
         private System.Windows.Forms.Label lblAltura;
         private System.Windows.Forms.MaskedTextBox mtbAltura;
         private System.Windows.Forms.Label lblPeso;
-        private System.Windows.Forms.Label lblCarnivora;
-        private System.Windows.Forms.RadioButton rbSim;
-        private System.Windows.Forms.RadioButton rbNao;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.MaskedTextBox mtbPeso;
         private System.Windows.Forms.DataGridView dgvPlantas;
@@ -310,7 +259,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAltura;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPeso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCarnivora;
     }
 }
 

@@ -41,7 +41,6 @@ namespace View
             planta.Nome = txtNome.Text;
             planta.Altura = Convert.ToDecimal(mtbAltura.Text);
             planta.Peso = Convert.ToDecimal(mtbPeso.Text);
-            planta.Carnivora = rbSim.Checked;
 
             PlantaRepositorio repositorio = new PlantaRepositorio();
             repositorio.Alterar(planta);
@@ -53,7 +52,6 @@ namespace View
             planta.Nome = txtNome.Text;
             planta.Altura = Convert.ToDecimal(mtbAltura.Text);
             planta.Peso = Convert.ToDecimal(mtbPeso.Text);
-            planta.Carnivora = rbSim.Checked;
 
             PlantaRepositorio repositorio = new PlantaRepositorio();
             repositorio.Inserir(planta);
@@ -65,8 +63,6 @@ namespace View
             txtNome.Clear();
             mtbAltura.Clear();
             mtbPeso.Clear();
-            rbNao.Checked = false;
-            rbSim.Checked = false;
         }
 
         private void CadastroPlanta_Load(object sender, EventArgs e)
@@ -85,7 +81,7 @@ namespace View
                 Planta planta = plantas[i];
                 dgvPlantas.Rows.Add(new object[]
                 {
-                    planta.Id, planta.Nome, planta.Altura.ToString(), planta.Peso.ToString(), planta.Carnivora.ToString()
+                    planta.Id, planta.Nome, planta.Altura.ToString(), planta.Peso.ToString()
                 });
             }
         }
@@ -116,17 +112,14 @@ namespace View
             {
                 txtNome.Text = planta.Nome;
                 mtbAltura.Text = planta.Altura.ToString("0.00");
-                mtbPeso.Text = planta.Peso.ToString("000.00");
-                if (planta.Carnivora == true)
-                {
-                    rbSim.Checked = true;
-                }
-                else
-                {
-                    rbNao.Checked = true;
-                }
+                mtbPeso.Text = planta.Peso.ToString("000.00");               
                 lblId.Text = planta.Id.ToString();
             }
+        }
+
+        private void CadastroPlanta_Click(object sender, EventArgs e)
+        {
+            AtualizarTabela();
         }
     }
 }
