@@ -98,9 +98,9 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(9, 214);
+            this.btnSalvar.Location = new System.Drawing.Point(9, 207);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(88, 51);
+            this.btnSalvar.Size = new System.Drawing.Size(88, 29);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             this.dgvPlantas.ReadOnly = true;
             this.dgvPlantas.RowHeadersVisible = false;
             this.dgvPlantas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlantas.Size = new System.Drawing.Size(424, 195);
+            this.dgvPlantas.Size = new System.Drawing.Size(424, 166);
             this.dgvPlantas.TabIndex = 7;
             this.dgvPlantas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlantas_CellDoubleClick);
             // 
@@ -183,9 +183,9 @@
             // btnApagar
             // 
             this.btnApagar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApagar.Location = new System.Drawing.Point(103, 214);
+            this.btnApagar.Location = new System.Drawing.Point(103, 207);
             this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(88, 51);
+            this.btnApagar.Size = new System.Drawing.Size(88, 29);
             this.btnApagar.TabIndex = 8;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
@@ -204,9 +204,9 @@
             // btnAtualiza
             // 
             this.btnAtualiza.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualiza.Location = new System.Drawing.Point(538, 15);
+            this.btnAtualiza.Location = new System.Drawing.Point(538, 27);
             this.btnAtualiza.Name = "btnAtualiza";
-            this.btnAtualiza.Size = new System.Drawing.Size(88, 51);
+            this.btnAtualiza.Size = new System.Drawing.Size(88, 29);
             this.btnAtualiza.TabIndex = 11;
             this.btnAtualiza.Text = "Refresh";
             this.btnAtualiza.UseVisualStyleBackColor = true;
@@ -217,7 +217,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(637, 275);
+            this.ClientSize = new System.Drawing.Size(637, 244);
             this.Controls.Add(this.btnAtualiza);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnApagar);
@@ -231,6 +231,8 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.dgvPlantas);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CadastroPlanta";
             this.Text = "Cadstro Plantas";
             this.Load += new System.EventHandler(this.CadastroPlanta_Load);
