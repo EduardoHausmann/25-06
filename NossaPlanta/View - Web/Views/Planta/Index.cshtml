@@ -8,7 +8,7 @@
 
 <div class="row mb-3">
     <div class="col-12">
-        <a class="btn btn-outline-primary mt-3 mb-3" href="/planta/Cadastro" id="botao-cadastro">@*<i class="fa-plus"></i>*@Cadastrar Planta</a>
+        <a class="btn btn-outline-primary mt-3 mb-3" href="/planta/Cadastro" id="botao-cadastro"><i class="bi bi-plus"></i>Cadastrar Planta</a>
     </div>
 </div>
 
@@ -31,8 +31,8 @@
                 <td>@planta.Altura</td>
                 <td>@planta.Peso</td>
                 <td>
-                    <a href="/planta/editar?id=@planta.Id" class="btn btn-outline-primary">Editar</a>
-                    <a href="/planta/Apagar?id=@planta.Id" class="btn btn-outline-danger">Apagar</a>
+                    <a href="/planta/editar?id=@planta.Id" class="btn btn-outline-primary"><i class="bi bi-pencil"></i> Editar</a>
+                    <a href="/planta/Apagar?id=@planta.Id" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Apagar</a>
                 </td>
             </tr>
         }
