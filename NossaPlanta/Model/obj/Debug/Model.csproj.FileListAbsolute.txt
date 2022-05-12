@@ -10,9 +10,3 @@ T:\Documentos\GitHub\25-06\NossaPlanta\Model\obj\Debug\Model.csprojAssemblyRefer
 T:\Documentos\GitHub\25-06\NossaPlanta\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 T:\Documentos\GitHub\25-06\NossaPlanta\Model\obj\Debug\Model.dll
 T:\Documentos\GitHub\25-06\NossaPlanta\Model\obj\Debug\Model.pdb
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Model\bin\Debug\Model.dll
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Model\bin\Debug\Model.pdb
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Model\obj\Debug\Model.csproj.AssemblyReference.cache
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Model\obj\Debug\Model.dll
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Model\obj\Debug\Model.pdb

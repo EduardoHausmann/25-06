@@ -16,14 +16,3 @@ T:\Documentos\GitHub\25-06\NossaPlanta\Repository\obj\Debug\Repository.csproj.Co
 T:\Documentos\GitHub\25-06\NossaPlanta\Repository\obj\Debug\Repository.csproj.CopyComplete
 T:\Documentos\GitHub\25-06\NossaPlanta\Repository\obj\Debug\Repository.dll
 T:\Documentos\GitHub\25-06\NossaPlanta\Repository\obj\Debug\Repository.pdb
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\bin\Debug\Repository.dll
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\bin\Debug\Repository.pdb
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\bin\Debug\Model.dll
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\bin\Debug\Model.pdb
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\obj\Debug\Repository.csproj.CopyComplete
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\obj\Debug\Repository.dll
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\obj\Debug\Repository.pdb
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\bin\Debug\Database.mdf
-C:\Users\Eduardo\Documents\GitHub\Exercicio-Class-Library\NossaPlanta\Repository\bin\Debug\Database_log.ldf
